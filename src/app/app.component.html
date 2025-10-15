@@ -18,7 +18,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-            <li><a class="dropdown-item" routerLink="/films">Lister</a></li>
+            <li><a class="dropdown-item" routerLink="/films" *kaHasRoles="['ADMIN']; checkRealm:true " >Lister</a></li>
           </ul>
         </li>
       </ul>
