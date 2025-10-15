@@ -3,9 +3,12 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
+import { provideKeycloakAngular } from './keycloak.config';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
+  providers: [
+    provideKeycloakAngular(), 
+    provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
   provideHttpClient()]
 };
