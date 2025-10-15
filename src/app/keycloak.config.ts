@@ -22,13 +22,12 @@ export const provideKeycloakAngular = () =>
     },
     initOptions: {
 
-      onLoad: 'login-required',
+      //onLoad: 'login-required',
 
-      /*onLoad: 'check-sso', 
-      silentCheckSsoRedirectUri: window.location.origin + '/silent-check
-sso.html', 
+      onLoad: 'check-sso', 
+      silentCheckSsoRedirectUri: window.location.origin + '/silent-checksso.html', 
       redirectUri: window.location.origin + '/' 
-      */
+      
     },
     features: [
       withAutoRefreshToken({
