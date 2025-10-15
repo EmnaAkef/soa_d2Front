@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Liste de Films</th>
+          </tr>
+        </thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Durée</th>
+          <th>Date Sortie</th>
+        </tr>
+
+        @for (film of films; track film)
+        {
+        <tbody>
+          <tr>
+            <td>{{film.idFilm}}</td>
+            <td>{{film.nomFilm}}</td>
+            <td>{{film.duree}}</td>
+            <td>{{film.dateSortie | date:'dd/MM/yyyy'}}</td>
+          </tr>
+        </tbody>
+        }
+      </table>
+    </div>
+  </div>
+</div>
